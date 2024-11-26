@@ -14,12 +14,7 @@ function App() {
   // }
 
   const first_name = "Coco";
-  let text;
-  if (first_name) {
-    text = first_name;
-  } else {
-    text = "there";
-  }
+
   return (
     <>
       {/* <input
@@ -29,7 +24,9 @@ function App() {
         style={{ width: "18rem", height: "2rem" }}
         placeholder="type your name here"
       /> */}
-      <p className="m-5 text-body-tertiary display-4">Hello {text}</p>
+      <p className="m-5 text-body-tertiary display-4">
+        {!first_name ? "Hello there" : "Hello " + first_name}
+      </p>
       <div className="row">
         {products.map((item) => {
           return (
